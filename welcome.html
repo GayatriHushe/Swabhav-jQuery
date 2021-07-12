@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+</head>
+
+<body>
+    <h1>Welcome</h1>
+    <div id="banner"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        $("#banner")
+            .html("<h1>Welcome to jQuery</h1>")
+            .css("backgroundColor", "pink")
+            .fadeIn(1000)
+            .fadeOut(3000)
+    </script>
+</body>
+
+
+</html>

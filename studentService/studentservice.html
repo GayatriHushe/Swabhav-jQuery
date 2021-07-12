@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <title>Student Get and Post</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <style>
+        table {
+            margin: 0 auto;
+            font-size: large;
+            border: 1px solid black;
+        }
+        
+        th,
+        td {
+            font-weight: bold;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        td {
+            font-weight: lighter;
+        }
+    </style>
+</head>
+
+<body style="background-color: pink;">
+    <form method="GET" id="studentform">
+
+        <h1>Student Details</h1>
+
+        <label for="rollno">Roll No:</label>
+        <input type="text" id="rollno" name="rollno" required><br><br>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="age">Age:</label>
+        <input type="range" id="age" name="age" min="0" max="50" value="21" oninput="ageVal.value=this.value" required>
+        <output id="ageVal" name="ageVal" for="age"></output><br><br>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required /><br><br>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date"><br><br>
+
+        <label>Gender:</label>
+        <input type="radio" class="radioBtnClass" name="gender" value="female" />Female
+        <input type="radio" class="radioBtnClass" name="gender" value="male" />Male
+        <br><br>
+
+        <img id="loading" src="loading.gif" style="width:30px;height:30px; visibility: hidden;"><br><br>
+
+        <button type="submit" id="add">Add Student</button>
+
+        <button id="display">Display Students</button><br><br>
+
+        <p id="total"></p>
+
+        <table id='table' style="visibility: hidden;">
+            <tr>
+                <th>ROLL NO</th>
+                <th>NAME</th>
+                <th>AGE</th>
+                <th>EMAIL</th>
+                <th>DATE</th>
+                <th>GENDER</th>
+            </tr>
+        </table>
+
+    </form>
+
+    <script src="studentservice.js"></script>
+</body>
+
+</html>
